@@ -12,7 +12,7 @@ This project is developed using Angular
 
 ## Local Development
 - Run `npm run start` to create local server.
-- This project is currently using local backend to run APIs. Open repo  `coccoc-frontend-assessement-backend` and follow the instruction in `README.md` to run local backend server before continue testing
+- This project is currently using local backend to run APIs. Open repo  `coccoc-assessement-backend` and follow the instruction in `README.md` to run local backend server before continue testing
 - Navigate to `http://localhost:4200/`.
 
 ## Build
