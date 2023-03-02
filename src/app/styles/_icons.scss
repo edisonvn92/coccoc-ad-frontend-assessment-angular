@@ -1,0 +1,34 @@
+.small-icon {
+    width: 14px;
+    height: 14px;
+}
+
+.icon-eye-grey {
+    mask-image: url('../../assets/icons/eye.svg');
+    background-color: $grey;
+}
+
+.icon-eye-green {
+    mask-image: url('../../assets/icons/eye.svg');
+    background-color: $green;
+}
+
+.icon-caution-circle {
+    mask-image: url('../../assets/icons/caution-circle.svg');
+    background-color: $red;
+}
+
+.icon-tick-green {
+    mask-image: url('../../assets/icons/tick.svg');
+    background-color: $green;
+}
+
+.icon-checkbox-checked {
+    mask-image: url('../../assets/icons/checkbox-checked.svg');
+    background-color: $green;
+}
+
+.icon-checkbox-blank {
+    mask-image: url('../../assets/icons/checkbox-blank.svg');
+    background-color: $grey;
+}

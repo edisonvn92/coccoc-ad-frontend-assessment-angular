@@ -1,0 +1,14 @@
+@import 'src/styles';
+
+.success-message {
+    margin-top: 200px;
+    display: flex;
+    gap: 10px;
+    height: 32px;
+    padding: 0 10px;
+    border: 1px solid $green;
+    border-radius: 3px;
+    p {
+        margin: auto;
+    }
+}

@@ -1,0 +1,80 @@
+<div class="main-container">
+    <div class="form-area box">
+      <h2 class="login-title">{{ 'login' | translate }}</h2>
+      <p>{{'do_not_have_account' | translate}} <a routerLink="">{{'sign_up_here' | translate}}</a></p>
+      <form class="login-form" [formGroup]="loginForm" autocomplete="chrome-off">
+        <label for="email"><b>{{'email' | translate}}</b></label>
+        <div class="input-group">
+          <input
+            id="userid-field"
+            class="form-control"
+            formControlName="email"
+            type="text"
+            name="email"
+            placeholder="email@example.com"
+            autocomplete="off"
+          />
+        </div>
+        <div class="mt-2 d-flex flex-gap" *ngIf="emailField.dirty && emailField.invalid">
+          <div class="small-icon mt-1 icon-caution-circle"></div>
+          <span class="text-danger">{{'required' | translate}}</span>
+        </div>
+  
+        <label for="password" class="mt-3"><b>{{'password' | translate}}</b></label>
+        <div class="input-group">
+          <input
+            id="password-field"
+            class="form-control mt-1"
+            [type]="showPassword ? 'text' : 'password'"
+            formControlName="password"
+            name="password"
+            placeholder="{{ 'enter_your_password' | translate }}"            
+            autocomplete="off"
+            
+          />
+          <div
+            class="cursor-pointer toggle-password small-icon"
+            [ngClass]="showPassword ? ['icon-eye-green'] : ['icon-eye-grey']"
+            (click)="showPassword = !showPassword"
+          ></div>
+        </div>
+
+        <div class="mt-2 d-flex flex-gap" *ngIf="passwordField.dirty && passwordField.invalid">
+          <div class="small-icon mt-1 icon-caution-circle"></div>
+          <span class="text-danger">{{'required' | translate}}</span>
+        </div>
+  
+        <div class="d-flex justify-content-between mt-2">
+          <div>
+            <app-customized-checkbox
+            [checked]="rememberMe"
+            (clickCheckbox)="rememberMe = !rememberMe"
+            
+          ></app-customized-checkbox>
+            <span >{{ 'remember_my_account' | translate }}</span>
+          </div>
+          <a routerLink="" routerLinkActive="active" class="link">
+            {{ 'forgot password' | translate }}
+          </a>
+        </div>
+
+        <div class="mt-3 d-flex flex-gap" *ngIf="loginFailed">
+          <div class="small-icon mt-1 icon-caution-circle"></div>
+          <span class="text-danger">{{'account_information_incorrect' | translate}}</span>
+        </div>
+  
+        <div class="mt-3">
+          <button *ngIf="!processing"
+          class="btn btn-success border-radius-2"
+          [disabled]="loginForm.invalid"
+          (click)="onSubmit()">
+            <b class="text-white">{{ 'login' | translate | uppercase}}</b>
+          </button>
+
+          <p class="text-success" *ngIf="processing">{{"processing" | translate | uppercase}}...</p>
+        </div>
+        
+      </form>
+    </div>
+  </div>
+  

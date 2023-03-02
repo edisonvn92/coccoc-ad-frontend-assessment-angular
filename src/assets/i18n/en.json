@@ -1,0 +1,13 @@
+{
+    "login": "Login",
+    "do_not_have_account": "Do not have account?",
+    "sign_up_here": "Sign up here",
+    "email": "Email",
+    "password": "Password",
+    "enter_your_password": "Enter your password",
+    "remember_my_account": "Remember my account",
+    "forgot_password": "Forgot password?",
+    "required": "Required",
+    "login_success_welcome_message": "Welcome {{name}}, you have log in successfully",
+    "account_information_incorrect": "Account information incorrect"
+}

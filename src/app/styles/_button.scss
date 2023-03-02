@@ -1,0 +1,9 @@
+.btn {
+    &:disabled {
+        background-color: $light-grey !important;
+        border-color: $light-grey !important;
+        * {
+            color: $grey !important;
+        }
+    }
+}

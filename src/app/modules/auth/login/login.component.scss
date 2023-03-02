@@ -1,0 +1,26 @@
+@import 'src/styles';
+
+.main-container {
+    background-color: rgba(251, 252, 249, 100);
+}
+
+.form-area {
+    width: 400px;
+    margin: 200px 0 auto;
+}
+
+.toggle-password {
+    float: right;
+    margin-top: 13px;
+    position: absolute;
+    z-index: 100;
+    right: 10px;
+}
+
+.flex-gap {
+    gap: 5px
+}
+
+.mt-1 {
+    margin-top: 2px !important;
+}

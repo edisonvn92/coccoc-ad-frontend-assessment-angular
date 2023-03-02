@@ -1,0 +1,45 @@
+/* You can add global styles to this file, and also import other style files */
+@import './app/styles/font';
+@import './app/styles/color';
+@import './app/styles/icons';
+@import './app/styles/control';
+@import './app/styles/button';
+
+/* Importing Bootstrap SCSS file. */
+@import 'bootstrap/scss/bootstrap';
+
+html {
+  height: 100%;
+}
+
+* {
+    font-family: 'Segoe UI', sans-serif;
+    color: $black;
+}
+p, span, button, label, input, a, b {
+  font-size: 12px;
+}
+
+h2 {
+  font-size: 24px;
+}
+
+a {
+  color: $green;
+}
+
+.box {
+  box-shadow: 4px 4px 10px $grey;
+  background-color: white;
+  padding: 30px;
+}
+
+.main-container {
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
