@@ -1,4 +1,17 @@
 .btn {
+    display: inline-block;
+    padding: 3px 10px;
+    height: 32px;
+    color: $black;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    cursor: pointer;
+    -webkit-user-select: none;
+    user-select: none;
+    border: 1px solid transparent;
+    border-radius: 3px;
+    
     &:disabled {
         background-color: $light-grey !important;
         border-color: $light-grey !important;

@@ -3,3 +3,26 @@ $green: rgb(90, 192, 118) !default;
 $grey: rgb(150, 150, 150) !default;
 $light-grey: rgb(239, 239, 239) !default;
 $red: #dc3545 !default;
+$white: #fff !default;
+
+$colors: (
+    'black': $black,
+    'green': $green,
+    'grey': $grey,
+    'light-grey': $light-grey,
+    'red': $red,
+    'white': $white
+);
+
+@mixin color() {
+    @each $colorText, $color in $colors {
+        .text-#{$colorText} {
+            color: #{$color};
+        }
+        .icon-color-#{$colorText}, .bg-#{$colorText} {
+            background-color: #{$color};
+        }
+    }
+}
+
+@include color();

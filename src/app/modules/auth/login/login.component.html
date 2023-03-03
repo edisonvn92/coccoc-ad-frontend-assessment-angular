@@ -1,13 +1,13 @@
 <div class="main-container">
     <div class="form-area box">
-      <h2 class="login-title">{{ 'login' | translate }}</h2>
+      <h2 class="login-title m-0">{{ 'login' | translate }}</h2>
       <p>{{'do_not_have_account' | translate}} <a routerLink="">{{'sign_up_here' | translate}}</a></p>
       <form class="login-form" [formGroup]="loginForm" autocomplete="chrome-off">
         <label for="email"><b>{{'email' | translate}}</b></label>
         <div class="input-group">
           <input
             id="userid-field"
-            class="form-control"
+            class="form-control mt-5"
             formControlName="email"
             type="text"
             name="email"
@@ -15,16 +15,16 @@
             autocomplete="off"
           />
         </div>
-        <div class="mt-2 d-flex flex-gap" *ngIf="emailField.dirty && emailField.invalid">
-          <div class="small-icon mt-1 icon-caution-circle"></div>
-          <span class="text-danger">{{'required' | translate}}</span>
+        <div class="mt-10 d-flex flex-gap" *ngIf="emailField.dirty && emailField.invalid">
+          <div class="small-icon icon-caution-circle icon-color-red mt-2"></div>
+          <span class="text-red">{{'required' | translate}}</span>
         </div>
   
-        <label for="password" class="mt-3"><b>{{'password' | translate}}</b></label>
+        <label for="password" class="mt-10"><b>{{'password' | translate}}</b></label>
         <div class="input-group">
           <input
             id="password-field"
-            class="form-control mt-1"
+            class="form-control mt-5"
             [type]="showPassword ? 'text' : 'password'"
             formControlName="password"
             name="password"
@@ -39,12 +39,12 @@
           ></div>
         </div>
 
-        <div class="mt-2 d-flex flex-gap" *ngIf="passwordField.dirty && passwordField.invalid">
-          <div class="small-icon mt-1 icon-caution-circle"></div>
+        <div class="mt-10 d-flex flex-gap" *ngIf="passwordField.dirty && passwordField.invalid">
+          <div class="small-icon icon-caution-circle icon-color-red mt-2"></div>
           <span class="text-danger">{{'required' | translate}}</span>
         </div>
   
-        <div class="d-flex justify-content-between mt-2">
+        <div class="d-flex justify-content-between mt-20">
           <div>
             <app-customized-checkbox
             [checked]="rememberMe"
@@ -58,20 +58,20 @@
           </a>
         </div>
 
-        <div class="mt-3 d-flex flex-gap" *ngIf="loginFailed">
+        <div class="mt-10 d-flex flex-gap" *ngIf="loginFailed">
           <div class="small-icon mt-1 icon-caution-circle"></div>
           <span class="text-danger">{{'account_information_incorrect' | translate}}</span>
         </div>
   
-        <div class="mt-3">
+        <div class="mt-20">
           <button *ngIf="!processing"
-          class="btn btn-success border-radius-2"
+          class="btn bg-green"
           [disabled]="loginForm.invalid"
           (click)="onSubmit()">
             <b class="text-white">{{ 'login' | translate | uppercase}}</b>
           </button>
 
-          <p class="text-success" *ngIf="processing">{{"processing" | translate | uppercase}}...</p>
+          <p class="text-green" *ngIf="processing">{{"processing" | translate | uppercase}}...</p>
         </div>
         
       </form>
